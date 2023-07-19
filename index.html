@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/devchallenges.png">
+  <script src="https://kit.fontawesome.com/4d887b5fa1.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="left">
+      <div class="heading">
+        <h1>Checkout</h1>
+      </div>
+      <div class="contact">
+        <h3>Contact information</h3>
+        <div class="mail">
+          <p>Email</p>
+          <i class="fa-solid fa-envelope fa-sm icon-email" style="color: #71767f;"></i>
+          <input type="email" id="email" placeholder="Enter Your email" value=""><br>  <span id="error-mail"></span>
+        </div><br>
+        <div class="phone">
+          <p>Phone</p>
+          <i class="fa-solid fa-phone fa-sm icon-phone" style="color: #71767f;"></i>
+          <input type="tel" id="phoneno" placeholder="Enter Your Phone Number" maxlength="10"><br>  <span id="error-phone"></span>
+        </div>
+      </div>
+      <div class="shipping">
+        <h3>Shipping address</h3>
+        <div class="name">
+          <p>Full name</p>
+          <i class="fa-solid fa-user fa-sm icon-user" style="color: #71767f;"></i>
+          <input type="text" class="input-name" placeholder="Enter full name">
+        </div><br>
+        <div class="address">
+          <p>Address</p>
+          <i class="fa-solid fa-house fa-sm icon-address" style="color: #71767f;"></i>
+          <input type="text" class="input-address" placeholder="Your address">
+        </div><br>
+        <div class="city">
+          <p>City</p>
+          <i class="fa-solid fa-city fa-sm icon-city" style="color: #71767f;"></i>
+          <input type="text" class="input-city" placeholder="Your city">
+        </div><br>
+        <div class="flex">
+          <div class="country">
+            <p>Country</p>
+            <i class="fa-solid fa-earth-americas fa-sm icon-country" style="color: #71767f;"></i>
+            <input type="text" placeholder="Your country" class="input-country">
+          </div><br>
+          <div class="pcode">
+            <p>Postal code</p>
+            <i class="fa-solid fa-location-dot fa-sm icon-pcode" style="color: #71767f;"></i>
+            <input type="tel" maxlength="6" placeholder="Your postal code" class="input-pcode">
+          </div>
+        </div>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" class="input-checkbox"><span>Save this information for next time</span>
+      </div>
+
+      <button class="submit" onclick="isValid()">Continue</button>
+    </div>
+
+
+    <div class="right">
+      <div class="output">
+        <div class="img1-detail">
+          <div class="img1">
+            <img src="images/photo1.png" alt="">
+          </div>
+          <div class="detail">
+            <b>Vintage Backbag</b>
+            <span id="discount"> $54.99</span>
+            <span class="original">$94.99</span>
+            <div class="item-sorter">
+              <div class="sorting">
+                <button class="decrease" onclick="decreaseNum1()">-</button><span id="display1">1</span><button class="increase" onclick="increaseNum1()">+</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="img2-detail">
+          <div class="img2">
+            <img src="images/photo2.png" alt="" width="80%">
+          </div>
+          <div class="detail">
+            <b>Levi Shoes</b><br>
+            <span id="discount"> $74.99</span>
+            <span class="original">$124.99</span>
+            <div class="item-sorter">
+              <div class="sorting">
+                <button class="decrease" onclick="decreaseNum2()">-</button><span id="display2">1</span><button class="increase" onclick="increaseNum2()">+</button>
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+        <hr> 
+        <div class="shipping-charge">
+          <span class="ship">Shipping</span> <span class="cost">$19</span>
+        </div>
+        <hr>
+        <div class="total">
+          <span class="total-prize">Total</span> <span class="bill">148.98$</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+</html>
